@@ -1,0 +1,20 @@
+local lib = loadstring(game:HttpGet('https://raw.githubusercontent.com/TheoTheEpic/AquaLib/main/AquaLib.lua'))()
+
+
+local window = lib.createWindow("Sniping", "Booth Changer", true) 
+local tab1 = window.createTab("Booth")
+local section1 = tab1.createSection("Booth Changer Stuff :", false)
+tab1.createToggle("Auto Detect Booth", false, function(value) -- tab.createToggle(text, defualt value, callback)
+	print(value)
+end)
+tab1.createToggle("Change Price {MUST BE ON}", false, function(value) -- tab.createToggle(text, defualt value, callback)
+	print(value)
+end)
+tab1.createSlider("Select Amount Of Gems", {min = 1, max = 10000, defualt = 1}, function(Value) -- tab.createSlider(text, config(min, max, defualt), callback)
+	print(Value) -- Will be a number between min and max
+end)
+local input = tab1.createTextBox("Username?", "Type It Here.") -- section.createTextBox(text, placeholder)
+
+
+
+local tab2 = window.createTab("Credits")
